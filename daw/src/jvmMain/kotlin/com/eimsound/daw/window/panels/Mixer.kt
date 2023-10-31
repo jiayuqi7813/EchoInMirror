@@ -52,10 +52,13 @@ import com.eimsound.daw.window.dialogs.openQuickLoadDialog
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import com.eimsound.daw.i18n.I18nHelper
 
 private val TRACK_WIDTH = 90.dp
 
 data class TrackAudioProcessorMoveAction(val index: Int, val list: MutableList<TrackAudioProcessorWrapper>)
+
+
 
 @OptIn(DelicateCoroutinesApi::class)
 @Composable
@@ -346,7 +349,7 @@ private fun MixerTrack(track: Track, index: String, containerColor: Color = Mate
 }
 
 object Mixer: Panel {
-    override val name = "混音台"
+    override val name = I18nHelper.getMessage("mixer")
     override val direction = PanelDirection.Horizontal
 
     @Composable
