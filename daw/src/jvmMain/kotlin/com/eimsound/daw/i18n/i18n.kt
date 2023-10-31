@@ -1,6 +1,5 @@
 package com.eimsound.daw.i18n;
 
-
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
